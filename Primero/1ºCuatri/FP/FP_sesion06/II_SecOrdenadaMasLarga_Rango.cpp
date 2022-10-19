@@ -16,7 +16,7 @@
 	Entradas: Valor de temperatura(temperatura)
 	Salidas: Posicion de la subsecuencia y longitud
 	
-	test
+	
 
 ****************************************************************************/
 
