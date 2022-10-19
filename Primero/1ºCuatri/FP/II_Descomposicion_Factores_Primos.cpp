@@ -18,6 +18,7 @@ using namespace std;
 int main() //Programa principal
 {
     int numero;
+    bool terminar_bucle = false;
 
 	//Entrada de datos
 	
@@ -32,8 +33,11 @@ int main() //Programa principal
 
     for (int i=1;terminar_bucle != true; i++){
         while (numero%i == 0){
-            cout << i;
+            cout << i << " ";
             numero = numero/i;
+        }
+        if (numero == 1){
+            terminar_bucle = true; //Terminamos el bucle
         }
     }
 	
