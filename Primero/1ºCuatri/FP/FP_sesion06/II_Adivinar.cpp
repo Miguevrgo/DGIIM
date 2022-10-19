@@ -56,7 +56,7 @@ int main() //Programa principal
 		else{
 			cout << "Felicidades, has acertado el numero!";
 		}
-	}while(numero != incognita || numero == TERMINADOR);
+	}while(numero != incognita || numero == TERMINADOR); // FUNCIONA???????????????????
 
 	return 0;
 }

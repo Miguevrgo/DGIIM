@@ -52,6 +52,8 @@ int main()
 	cin >> a;
 	cin >> unidad_final;
 	
+	// SE PUEDE PONER EL CIN SEGUIDO PARA QUE NO HAGA FALTA DARLE AL ENTER:
+	// cin >> valor >> unidad_inicial >> a >> unidad_final
 	//Comprobacion datos introducidos correctos
 	
 	datos_correctos = ((valor>=0) && (a == "a") 
