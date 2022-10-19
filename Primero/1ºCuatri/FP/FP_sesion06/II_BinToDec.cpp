@@ -42,7 +42,7 @@ int main() //Programa principal
 				cadena_valida = true;
 			}
 			else{
-				cadena_valida = false;
+				cadena_valida = false; //MAL SOLO COMPRUEBA LA FINAL
 			}
 		} 
     }while(cadena_valida == false);
