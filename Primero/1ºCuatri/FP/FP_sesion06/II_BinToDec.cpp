@@ -37,12 +37,13 @@ int main() //Programa principal
     	
     	//Se comprueba que la cadena es valida:
     	
-    	for (int j=1;j < longitud;j++){
+    	for (int j=1;j < longitud // && error != false;j++){
 			if ((binario[j]=='1') || (binario[j]=='0')){
 				cadena_valida = true;
 			}
 			else{
 				cadena_valida = false; //MAL SOLO COMPRUEBA LA FINAL
+				//bool error = true;
 			}
 		} 
     }while(cadena_valida == false);
