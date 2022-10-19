@@ -31,7 +31,7 @@ int main() //Programa principal
 
     cout << numero << " Se puede factorizar en numero primos como: ";
 
-    for (int i=1;terminar_bucle != true; i++){
+    for (int i=2;terminar_bucle != true; i++){
         while (numero%i == 0){
             cout << i << " ";
             numero = numero/i;
