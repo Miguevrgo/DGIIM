@@ -1,5 +1,5 @@
 /****************************************************************************
-	FUNDAMENTOS DE PROGRAMACIï¿½N
+	FUNDAMENTOS DE PROGRAMACIÓN
 
 	Miguel Ángel De La Vega Rodríguez    |	Grupo A1
 	Construya un programa que calcule cuando se produjo la mayor secuencia de 
@@ -16,7 +16,7 @@
 	Entradas: Valor de temperatura(temperatura)
 	Salidas: Posicion de la subsecuencia y longitud
 	
-	
+	test
 
 ****************************************************************************/
 
