@@ -84,9 +84,7 @@ int main() //Programa principal
 		    cout << "Felicidades, has acertado el numero!" << endl;
 		}
 		
-		cout << "Introduzca un numero entre " 
-			 << MIN << " y " << MAX << endl << "(Para parar de jugar pulse: " 
-			 << PARAR <<"): ";
+		cout << "Desea seguir jugando? (" << PARAR << " NO) " << PARAR;
 		cin >> numero;
 		
 		if (numero == PARAR){
