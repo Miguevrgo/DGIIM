@@ -33,29 +33,44 @@ using namespace std;
 int main() //Programa principal
 {
     char eleccion;
-
+    bool salir_bucle = false;
 	//Entrada de datos
 
-	// Menu de opciones 
-	cout << "\n\nMenu de Opciones" << endl;        
-    cout << "\t[A] Calcular adicion" << endl;
-    cout << "\t[P] Calcular producto" << endl;
-    cout << "\t[X] Salir" << endl;
-
-    // Menu de la suma
-	cout << "\n\nMenu de Adicion" << endl;        
-    cout << "\t[S] Calcular suma" << endl;
-    cout << "\t[R] Calcular resta" << endl;
-    cout << "\t[X] Salir" << endl;
-
-    //Menu del producto
+	// Menu de opciones
     do{
-    cout << "\n\nMenu de Producto" << endl;        
-    cout << "\t[M] Calcular Multiplicacion" << endl;
-    cout << "\t[D] Calcular Division entera" << endl;
-    cout << "\t[R] Calcular Resto"
-    cout << "\t[X] Salir" << endl;
-    }while(eleccion!='X')
+        cout << "\n\nMenu de Opciones" << endl;        
+        cout << "\t[A] Calcular adicion" << endl;
+        cout << "\t[P] Calcular producto" << endl;
+        cout << "\t[X] Salir" << endl;
+        cin >> eleccion;
+        switch (eleccion){
+            case 'A':
+                // Menu de la suma
+                do{
+                    cout << "\n\nMenu de Adicion" << endl;        
+                    cout << "\t[S] Calcular suma" << endl;
+                    cout << "\t[R] Calcular resta" << endl;
+                    cout << "\t[X] Salir" << endl;
+                }while(eleccion!='X')
+                break;
+            case 'P':        
+                //Menu del producto
+                do{
+                    cout << "\n\nMenu de Producto" << endl;        
+                    cout << "\t[M] Calcular Multiplicacion" << endl;
+                    cout << "\t[D] Calcular Division entera" << endl;
+                    cout << "\t[R] Calcular Resto"
+                    cout << "\t[X] Salir" << endl;
+                }while(eleccion!='X')
+                break;
+            case 'X':
+                salir_bucle=true;
+                break;
+            default:
+                cout << "Opcion no valida" << endl;
+                break;
+        }
+    while(salir_bucle!=true)
 	//Cálculos
 
 
