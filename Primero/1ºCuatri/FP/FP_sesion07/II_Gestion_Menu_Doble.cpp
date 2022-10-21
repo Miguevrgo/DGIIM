@@ -19,7 +19,7 @@
         R–>Calcula resto.
         X–>Salir.
 	
-	Entradas: 
+	Entradas: valor de eleccion
 	Salidas: 
 	
 	
@@ -34,6 +34,11 @@ int main() //Programa principal
 {
     char eleccion;
     bool salir_bucle = false;
+    double numero1;
+    double numero2;
+    double resultado;
+    bool es_entero;
+
 	//Entrada de datos
 
 	// Menu de opciones
@@ -51,6 +56,26 @@ int main() //Programa principal
                     cout << "\t[S] Calcular suma" << endl;
                     cout << "\t[R] Calcular resta" << endl;
                     cout << "\t[X] Salir" << endl;
+                    switch (eleccion){
+                        case 'S':
+                            cout << "Introduzca el numero 1: ";
+                            cin >> numero1;
+                            cout << "Introduzca el numero 2: ";
+                            cin >>numero2;
+                            resultado = numero1 + numero2;
+                            break;                        
+                        case 'R':
+                            cout << "Introduzca el numero 1: ";
+                            cin >> numero1;
+                            cout << "Introduzca el numero 2: ";
+                            cin >>numero2;
+                            resultado = numero1 - numero2;
+                            cout << "Resultado: " << resultado << endl;
+                            break;
+                        default:
+                            cout << "Opcion no valida" << endl;
+                            break;
+                    }while(eleccion!='X')
                 }while(eleccion!='X')
                 break;
             case 'P':        
@@ -61,6 +86,35 @@ int main() //Programa principal
                     cout << "\t[D] Calcular Division entera" << endl;
                     cout << "\t[R] Calcular Resto"
                     cout << "\t[X] Salir" << endl;
+                    switch(eleccion){
+                        case 'M':
+                            cout << "Introduzca el numero 1: ";
+                            cin >> numero1;
+                            cout << "Introduzca el numero 2: ";
+                            cin >> numero2;
+                            resultado = numero1*numero2;
+                            cout << "Resultado: " << resultado << endl;
+                            break;
+                        case 'D':
+                            cout << "Introduzca el numero 1: ";
+                            cin >> numero1;
+                            cout << "Introduzca el numero 2: ";
+                            cin >> numero2;
+                            resultado = (int)numero1/(int)numero2;
+                            cout << "Resultado: " << resultado << endl;
+                            break;
+                        case 'R':
+                            cout << "Introduzca el numero 1: ";
+                            cin >> numero1;
+                            cout << "Introduzca el numero 2: ";
+                            cin >> numero2;
+                            resultado = (int)numero1%(int)numero2;
+                            cout << "Resultado: " << resultado << endl;
+                            break;
+                        default:
+                            cout << "Opcion no valida";
+                            break;
+                    }
                 }while(eleccion!='X')
                 break;
             case 'X':
