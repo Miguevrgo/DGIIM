@@ -19,8 +19,8 @@
         R–>Calcula resto.
         X–>Salir.
 	
-	Entradas: valor de eleccion
-	Salidas: 
+	Entradas: Valor de eleccion
+	Salidas: Resultado opcion elegida
 	
 	
 
@@ -34,6 +34,8 @@ int main() //Programa principal
 {
     char eleccion;
     bool salir_bucle = false;
+    bool salir_menu1 = false;
+    bool salir_menu2 = false;
     double numero1;
     double numero2;
     double resultado;
@@ -44,7 +46,7 @@ int main() //Programa principal
 	// Menu de opciones
     do{
         cout << "\n\nMenu de Opciones" << endl;        
-        cout << "\t[A] Calcular adicion" << endl;
+        cout << "\t[A] Calcular adicion" << endl; 
         cout << "\t[P] Calcular producto" << endl;
         cout << "\t[X] Salir" << endl;
         cin >> eleccion;
@@ -72,11 +74,14 @@ int main() //Programa principal
                             resultado = numero1 - numero2;
                             cout << "Resultado: " << resultado << endl;
                             break;
+                        case 'X':
+                            salir_menu1 = true;
+                            break;
                         default:
                             cout << "Opcion no valida" << endl;
                             break;
-                    }while(eleccion!='X')
-                }while(eleccion!='X')
+                    }
+                }while(salir_menu1 != true)
                 break;
             case 'P':        
                 //Menu del producto
@@ -86,6 +91,7 @@ int main() //Programa principal
                     cout << "\t[D] Calcular Division entera" << endl;
                     cout << "\t[R] Calcular Resto"
                     cout << "\t[X] Salir" << endl;
+                    //CREO QUE AQUI HAY QUE PONER UN RESET DEL BOOL
                     switch(eleccion){
                         case 'M':
                             cout << "Introduzca el numero 1: ";
@@ -111,11 +117,14 @@ int main() //Programa principal
                             resultado = (int)numero1%(int)numero2;
                             cout << "Resultado: " << resultado << endl;
                             break;
+                        case 'X':
+                            salir_menu2 = true;
+                            break;
                         default:
                             cout << "Opcion no valida";
                             break;
                     }
-                }while(eleccion!='X')
+                }while(salir_menu2!=true)
                 break;
             case 'X':
                 salir_bucle=true;
