@@ -18,7 +18,7 @@
 	
 	
 
-****************************************************************************/
+______________________________________________________________________________*/
 
 #include <iostream> //Inclusión de los recursos de E/S
 #include <ctime>
@@ -87,6 +87,7 @@ int main() //Programa principal
 		do{
 			cout << " ¿Quiere seguir jugando? (S/N): ";
 			cin >> seguir_jugando;
+			seguir_jugando = toupper(seguir_jugando);
 		}while ((seguir_jugando != 'S') && (seguir_jugando != 'N'));
 		
 		if (seguir_jugando == 'N'){

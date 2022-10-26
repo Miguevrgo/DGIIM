@@ -58,35 +58,40 @@ int main() //Programa principal
 	srand(time(&t)); // Inicializa generador de núms. aleatorios
 					 // con el reloj del sistema (hora actual)
 	int incognita;// Número aleatorio que se genera
+	int intervalo_max = MAX;
+	int intervalo_min = MIN;
 	
 	//Cálculos
 	
 	bool parar_jugar;
-	while (parar_jugar == false){
+	while (!parar_jugar){ //MAL, HAY QUE REPETIRLO X VECES (FOR)
 		incognita = (rand() % NUM_VALORES) + MIN; //Se genera la incognita
 		numero = NUM_VALORES/2;
-		
+		intervalo_max = MAX;
+		intervalo_min = MIN;
+
 		//Cuando la incognita sea mayor que NUM_VALORES/2
+		while (numero!=incognita){
 		if (incognita > numero){ 
-			while (numero!=incognita){
-				numero = (rand() % NUM_VALORES) + (NUM_VALORES/2);
-				numero_jugadas++;
-				jugadas_totales++;
-			}	
+			
+			numero = (rand() % NUM_VALORES) + (intervalo_min);		
+			numero_jugadas++;
+			jugadas_totales++;
+			intervalo_min += intervalo_min/2;
+			
 		}
 		//Cuando la incognita sea menor que NUM_VALORES/2
 		else if(incognita < numero){
-			while (numero!=incognita){
-				numero = (rand() % NUM_VALORES/2) + MIN;
+				numero = (rand() % intervalo_max + MIN;
 				numero_jugadas++;
 				jugadas_totales++;
-			}	
+				intervalo_max -= intervalo_max/2;	
 		}
 		else {
 			numero_jugadas++;
 			jugadas_totales++;
 		}
-		
+		}
 		cout << "El numero se acerto en " << numero_jugadas 
 			 << " jugadas" << endl;
 		
