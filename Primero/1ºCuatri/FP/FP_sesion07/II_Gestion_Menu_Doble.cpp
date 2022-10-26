@@ -113,7 +113,7 @@ int main() //Programa principal
                             for (i = 1; i <= (int)numero2; i++){
                             	resultado+=(int)numero1;
 							}
-                            cout << "Resultado: " << resultado << endl;
+                            cout << "Resultado: " << Producto << endl;
                             resultado = 0; //Reset valor del resultado
                             break;
                         case 'D': //Division entera
