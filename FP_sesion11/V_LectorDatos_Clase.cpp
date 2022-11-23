@@ -7,8 +7,8 @@
 	(Lector) que ofrezca un conjunto de métodos seguros de lectura etiquetada 
 	de datos int y double.
 
-	Entradas: 
-	Salidas: 
+	Entradas: Lectura de numero
+	Salidas: Se devuelve el numero leido con el filtro
 	
 	
 
